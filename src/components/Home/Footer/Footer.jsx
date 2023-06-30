@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Box, Flex, Icon, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/logo.png";
 import { AiOutlineFacebook, AiOutlineLinkedin } from "react-icons/ai";
 import { RiInstagramLine } from "react-icons/ri";
 import { FiTwitter } from "react-icons/fi";
@@ -48,7 +47,6 @@ const Footer = () => {
             <Box>
               <Link to="/">
                 <Flex gap={2} fontWeight="bold" align="center">
-                  <Image src={logo} boxSize="30px" objectFit="cover" />
                   <Text color="#ffffff" fontSize="30px">
                     InPred.
                   </Text>
