@@ -49,8 +49,8 @@ const Footer = () => {
               <Link to="/">
                 <Flex gap={2} fontWeight="bold" align="center">
                   <Image src={logo} boxSize="30px" objectFit="cover" />
-                  <Text color="#0c1631" fontSize="30px">
-                    SemaSenti
+                  <Text color="#ffffff" fontSize="30px">
+                    InPred.
                   </Text>
                 </Flex>
               </Link>
