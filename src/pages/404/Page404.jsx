@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Page404 = () => {
   return (
     <Stack w="100%" h="100vh" align="center" justify="center">
-      <Text fontSize="50px">Can't Find Your Page</Text>
+      <Text fontSize="50px">Still working on the other pages</Text>
       <Link to="/">
         <Button variant="outlined">Go Back</Button>
       </Link>
