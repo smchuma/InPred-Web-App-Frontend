@@ -7,6 +7,7 @@ import { extendTheme } from "@chakra-ui/react";
 import { AuthContextProvider } from "./Context/Auth/AuthContext.jsx";
 import { UserContextProvider } from "./Context/UserContext/UserContext.jsx";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ProjectProvider } from "./Context/ProjectContext/ProjectContext.jsx";
 
 const config = {
   initialColorMode: "light",
@@ -23,7 +24,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <BrowserRouter>
           <AuthContextProvider>
             <UserContextProvider>
-              <App />
+              <ProjectProvider>
+                <App />
+              </ProjectProvider>
             </UserContextProvider>
           </AuthContextProvider>
         </BrowserRouter>

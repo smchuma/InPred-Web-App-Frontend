@@ -62,7 +62,7 @@ const Navbar = () => {
                 Logout
               </Button>
             </Link>
-            <Link to="/dashboard">
+            <Link to="/projects">
               <Button
                 variant="unstyled"
                 w="150%"

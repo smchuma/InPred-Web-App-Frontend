@@ -42,7 +42,7 @@ const Login = () => {
       const accessToken = response?.data?.accessToken;
       const userId = response?.data?.userId;
       login(accessToken, userId);
-      navigate("/dashboard");
+      navigate("/projects");
       actions.resetForm();
       setLoading(false);
     } catch (err) {
