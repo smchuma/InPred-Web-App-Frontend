@@ -17,6 +17,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useState } from "react";
+import { Footer, Navbar } from "../../components";
 
 const Login = () => {
   const [errMsg, setErrMsg] = useState("");
@@ -70,22 +71,24 @@ const Login = () => {
 
   return (
     <>
+      <Navbar />
       <Stack
         boxShadow="rgba(0, 0, 0, 0.1) 0px 4px 12px"
         justify="center"
         align="center"
-        h="80vh"
+        minH="100vh"
         w="100%"
-        mt="80px"
-        backgroundColor="gray.200"
+        mt="70px"
+        bgGradient="linear(to-b, #0D0D0D, #010B40)"
       >
         <Stack
           align="center"
-          w={{ base: "100%", md: "40%" }}
-          bg="white"
-          p="80px"
-          boxShadow="rgba(0, 0, 0, 0.2) 0px 4px 12px"
+          w={{ base: "400px", md: "500px" }}
+          bg="transparent"
+          p="60px"
+          boxShadow="rgba(0, 0, 0, 0.1) 0px 4px 12px"
           borderRadius="20px"
+          color="white"
         >
           <Text fontSize="30px">Login.</Text>
           <Box w="100%">
@@ -125,21 +128,20 @@ const Login = () => {
                   <Text color="red.500">{errMsg}</Text>
                   <Button
                     type="submit"
-                    bg="#162D59"
+                    bg=" #6678d4"
                     color="white"
-                    variant="unstyled"
                     isLoading={loading}
                     loadingText="Loading"
                     w="100%"
-                    _hover={{ bg: "#112344" }}
+                    _hover={{ transform: "scale(1.05)" }}
                   >
                     Login
                   </Button>
                   <Flex>
                     <Text>Don't have an account? </Text>
                     <Link to="/register">
-                      <Box ml={2} color="blue.500">
-                        Register
+                      <Box ml={2} color="#6678d4">
+                        register
                       </Box>
                     </Link>
                   </Flex>
@@ -149,6 +151,7 @@ const Login = () => {
           </Box>
         </Stack>
       </Stack>
+      <Footer />
     </>
   );
 };

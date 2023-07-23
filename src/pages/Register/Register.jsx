@@ -15,6 +15,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useState } from "react";
+import { Footer, Navbar } from "../../components";
 
 const Register = () => {
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
@@ -63,6 +64,7 @@ const Register = () => {
 
   return (
     <>
+      <Navbar />
       <Stack
         boxShadow="rgba(0, 0, 0, 0.1) 0px 4px 12px"
         justify="center"
@@ -70,14 +72,15 @@ const Register = () => {
         h="80vh"
         w="100%"
         mt="80px"
-        backgroundColor="gray.200"
+        bgGradient="linear(to-b, #0D0D0D, #010B40)"
       >
         <Stack
           align="center"
-          w={{ base: "100%", md: "40%" }}
+          w={{ base: "400px", md: "500px" }}
           p="80px"
-          boxShadow="rgba(0, 0, 0, 0.2) 0px 4px 12px"
-          bg="white"
+          boxShadow="rgba(0, 0, 0, 0.1) 0px 4px 12px"
+          bg="transparent"
+          color="white"
           borderRadius="20px"
         >
           <Text fontSize="30px">Start your free trial today.</Text>
@@ -124,20 +127,20 @@ const Register = () => {
                   <Text color="red.500">{errMsg}</Text>
                   <Button
                     type="submit"
-                    bg="#162D59"
+                    bg=" #6678d4"
                     color="white"
                     variant="unstyled"
                     isLoading={loading}
                     loadingText="Loading"
                     w="100%"
-                    _hover={{ bg: "#112344" }}
+                    _hover={{ transform: "scale(1.05)" }}
                   >
                     Create an account
                   </Button>
                   <Flex>
                     <Text>Already have an account? </Text>
                     <Link to="/login">
-                      <Box ml={2} color="blue.500">
+                      <Box ml={2} color="#6678d4">
                         Login
                       </Box>
                     </Link>
@@ -148,6 +151,7 @@ const Register = () => {
           </Box>
         </Stack>
       </Stack>
+      <Footer />
     </>
   );
 };

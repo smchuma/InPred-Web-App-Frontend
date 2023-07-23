@@ -9,28 +9,7 @@ const Navbar = () => {
     logout();
   };
 
-  const links = [
-    {
-      id: 1,
-      name: "Features",
-      path: "/features",
-    },
-    {
-      id: 2,
-      name: "Pricing",
-      path: "/pricing",
-    },
-    {
-      id: 3,
-      name: "Contact",
-      path: "/contact",
-    },
-    {
-      id: 4,
-      name: "About",
-      path: "/about",
-    },
-  ];
+  const links = [];
 
   return (
     <nav>
@@ -109,7 +88,7 @@ const Navbar = () => {
             </Link>
             <Link to="/register">
               <Button borderRadius="20px" background="white" border="1px solid">
-                Sign up now
+                register
               </Button>
             </Link>
           </Flex>

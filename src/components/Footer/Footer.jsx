@@ -6,33 +6,7 @@ import { RiInstagramLine } from "react-icons/ri";
 import { FiTwitter } from "react-icons/fi";
 
 const Footer = () => {
-  const links = [
-    {
-      id: 1,
-      name: "Features",
-      path: "/features",
-    },
-    {
-      id: 2,
-      name: "Pricing",
-      path: "/pricing",
-    },
-    {
-      id: 3,
-      name: "Contact",
-      path: "/contact",
-    },
-    {
-      id: 4,
-      name: "About",
-      path: "/about",
-    },
-    {
-      id: 5,
-      name: "Book a Demo",
-      path: "",
-    },
-  ];
+  const links = [];
   return (
     <>
       <Stack
