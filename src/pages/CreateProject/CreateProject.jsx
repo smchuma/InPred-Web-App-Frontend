@@ -113,6 +113,11 @@ const CreateProject = () => {
                     <Input
                       value={projectName}
                       onChange={(e) => setProjectName(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          handleNextClick(e);
+                        }
+                      }}
                     />
                   </FormControl>
                   <Button

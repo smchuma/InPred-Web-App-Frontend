@@ -37,7 +37,7 @@ const Register = () => {
           withCredentials: true,
         }
       );
-      navigate("/dashboard");
+      navigate("/login");
       actions.resetForm();
       setLoading(false);
     } catch (err) {
@@ -129,7 +129,6 @@ const Register = () => {
                     type="submit"
                     bg=" #6678d4"
                     color="white"
-                    variant="unstyled"
                     isLoading={loading}
                     loadingText="Loading"
                     w="100%"
