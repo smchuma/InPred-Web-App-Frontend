@@ -37,11 +37,11 @@ const CreateProject = () => {
 
       try {
         const predictionResponse = await axios.post(PREDICTION, { fileData });
-        const predictionResults = predictionResponse?.data?.response;
+        const predictionResults = predictionResponse?.data;
 
         const projectData = {
           title: projectName,
-          sentimentResults: predictionResults,
+          results: predictionResults,
         };
         const createdProject = await createProject.mutateAsync(projectData);
 
@@ -64,7 +64,7 @@ const CreateProject = () => {
   return (
     <Stack
       color="white"
-      h="100vh"
+      h={{ base: "auto", md: "100vh" }}
       bgGradient="linear(to-b, #0D0D0D, #010B40)"
       w="100%"
       direction="row"
